@@ -22,19 +22,15 @@ export function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): L
     }
     dummy = dummy.next;
   }
-  if (list1) {
     while (list1) {
       dummy.next = new ListNode(list1.val);
       list1 = list1.next;
       dummy = dummy.next
     }
-  }
-  if (list2) {
     while (list2) {
       dummy.next = new ListNode(list2.val);
       list2 = list2.next;
       dummy = dummy.next
     }
-  }
   return ans.next;
 };
