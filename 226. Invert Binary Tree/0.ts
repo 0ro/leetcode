@@ -10,16 +10,13 @@ export class TreeNode {
 }
 
 export function invertTree(root: TreeNode | null): TreeNode | null {
-  function invert(root) {
-    if (root) {
-      let node = root.left;
-      root.left = root.right;
-      root.right = node;
+  if (root) {
+    const leftCopy = root.left;
 
-      invert(root.left);
-      invert(root.right);
-    }
-  };
-  invert(root);
-  return root;
+    root.left = invertTree(root.right);
+    root.right = invertTree(leftCopy);
+
+    return root;
+  }
+  return null;
 };
