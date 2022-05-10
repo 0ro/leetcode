@@ -5,7 +5,7 @@ interface TreeNode {
   parent: TreeNode | null
 }
 
-function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
+export function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
   function dfs(node: TreeNode | null, parent: TreeNode | null) {
     if (!node) {
       return; 
