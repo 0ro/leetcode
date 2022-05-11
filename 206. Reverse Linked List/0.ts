@@ -1,4 +1,4 @@
-class ListNode {
+export class ListNode {
   val: number
   next: ListNode | null
   constructor(val?: number, next?: ListNode | null) {
@@ -7,7 +7,7 @@ class ListNode {
   }
 }
 
-function reverseList(head: ListNode | null, prev: ListNode | null = null): ListNode | null {
+export function reverseList(head: ListNode | null, prev: ListNode | null = null): ListNode | null {
   if (!head) {
     return prev;
   }
